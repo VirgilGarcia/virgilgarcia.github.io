@@ -2,137 +2,423 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
+    font-family: 'POPPINS', sans-serif;
 }
 
 body {
     background-color: #1c1c1c;
+    overflow-x: hidden;
     color: white;
 }
 
-/* EN TETE */
+.container {
+    width: 1350px;
+    margin: auto;
+}
+
+.colorletter {
+    color: #44de0c;
+}
 
 header {
-    position: relative;
-    font-family: 'Rubik Mono One', sans-serif;
     height: 100vh;
-    width: 100%;
+    overflow-x: hidden;
+}
+
+/* NAVIGATION */
+nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+}
+
+.logo .dot {
+    font-size: 3rem;
+    color: #44de0c;
+    margin-left: 10px;
+}
+
+
+.menu {
+    display: flex;
+    gap: 40px;
+    font-size: 1.2rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: 0.5s ease-in-out;
+}
+
+.menu a:hover::after {
+    transform: scaleX(1);
+}
+
+.menuMobile {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    display: none;
+    z-index: 2;
+}
+
+.menuMobile::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.menuMobile::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.menuOpen {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
-
-.name {
-    border: 5px solid rgb(36, 125, 160, .8);
-    box-shadow: 0 0 20px rgb(36, 125, 160);
-    padding: 30px;
-    border-radius: 10px;
-    color: transparent;
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: rgb(171, 211, 27);
-    text-align: center;
-    font-size: 4.5rem;
-    margin-bottom: 100px;
-    transform: translateY(-500%);
-    animation: clignoteName 1s ease forwards;
-    animation-delay: 0.5s;
-}
-
-.job {
+    gap: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 6rem;
-}
-
-.job .letter {
-    text-shadow: 0 0 5px black;
-}
-
-.job .letter:nth-child(1) {
-    margin-bottom: 50px;
+    height: 100vh;
+    background-color: #1c1c1c;
+    font-size: 2.5rem;
     transform: translateX(100%);
-    animation: appearJob 1s ease-in-out forwards;
-    animation-delay: 2s;
+    transition: all 0.5s ease-in-out;
 }
 
-.job .letter:nth-child(2) {
-    transform: translateX(-100%);
-    animation: appearJob 1s ease-in-out forwards;
-    animation-delay: 2.5s;
+.active {
+    transform: translateX(0%);
+    transition: all 0.5s ease-in-out;
 }
+
+.menuOpen a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.menuOpen a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: 0.5s ease-in-out;
+}
+
+.menuOpen a:hover::after {
+    transform: scaleX(1);
+}
+
+/* HOME CONTAINER */
+
+.home_container {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    position: relative;
+    top: 40%;
+    transform: translateY(-40%);
+}
+
+.present {
+    width: 820px;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.multi {
+    color: #45DE0C;
+}
+
+.line {
+    position: absolute;
+    left: 110px;
+    top: 50px;
+    width: 100px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.subtitle {
+    margin-top: 25px;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.homeButton {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 50px 0 50px 0;
+}
+
+.homeButton .btn a {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    text-decoration: none;
+    color: #1c1c1c;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+.homeButton .btn {
+    position: relative;
+    width: 250px;
+    margin: 0 20px 0 20px;
+    padding: 10px;
+    background-color: #45DE0C;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.homeButton .btn::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.homeButton .btn:hover::before {
+    transform: translateX(0%);
+}
+
+.pic {
+    width: 300px;
+    height: 100%;
+    position: relative;
+}
+
+.pic img {
+    width: 300px;
+    height: 300px;
+}
+
+.gribouilli {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: #44de0c44;
+    animation: gribUn 5s infinite;
+}
+
+.gribouilliDeux {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: #44de0c44;
+    animation: gribDeux 5s infinite;
+}
+
+@keyframes gribUn {
+    0% {
+        top: -20px;
+        left: -20px
+    }
+
+    25% {
+        top: 70px;
+        right: 35px;
+    }
+
+    50% {
+        top: 30px;
+        left: 0px;
+    }
+
+    75% {
+        top: 10px;
+        left: 35px;
+    }
+
+    100% {
+        top: -20px;
+        left: -20px
+    }
+}
+
+@keyframes gribDeux {
+    0% {
+        top: 40px;
+        left: 40px
+    }
+
+    25% {
+        top: -70px;
+        right: -35px;
+    }
+
+    50% {
+        top: -30px;
+        left: 0px;
+    }
+
+    75% {
+        top: -10px;
+        left: -35px;
+    }
+
+    100% {
+        top: 40px;
+        left: 40px
+    }
+}
+
 
 .scroll {
     position: absolute;
-    bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
-    animation: scroll 1s ease infinite;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 1.5s infinite;
 }
 
 @keyframes scroll {
     0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes clignoteName {
-    0% {
-        transform: scale(1) translateY(0%);
+        transform: translateX(-50%) scale(1.1);
         opacity: 1;
     }
 
     50% {
+        transform: translateX(-50%) scale(1.1);
         opacity: 0;
-        transform: scale(1.1);
     }
 
     100% {
+        transform: translateX(-50%) scale(1.1);
         opacity: 1;
-        transform: scale(1);
     }
 }
 
-@keyframes appearJob {
-    to {
-        transform: translateX(0%);
-    }
-}
+/* RESPONSIVE */
 
-@media (max-width: 950px) {
-    .job {
-        font-size: 4rem;
+@media screen AND (max-width: 1400px) {
+    .container {
+        width: 95%;
     }
 
-    .name {
-        font-size: 2.5rem;
+    nav {
+        margin-bottom: 100px;
     }
-}
 
-@media (max-width: 630px) {
-    .job {
+    .home_container {
+        flex-direction: column;
+    }
+
+    .present {
+        width: 95%;
+        margin-top: 150px;
+    }
+
+    .title {
         font-size: 3rem;
     }
 
-    .name {
-        font-size: 1.5rem;
+    .pic {
+        margin-bottom: 100px;
+    }
+
+    .scroll {
+        display: none;
     }
 }
 
-@media (max-width: 500px) {
-    .job {
-        font-size: 2rem;
+@media screen AND (max-width: 850px) {
+    .container {
+        width: 97%;
+    }
+
+    nav {
+        margin-bottom: 70px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menuMobile {
+        display: block;
+    }
+
+    .present {
+        width: 97%;
+        margin-top: 100px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .scroll {
+        display: none;
     }
 }
-
-/* ABOUT */

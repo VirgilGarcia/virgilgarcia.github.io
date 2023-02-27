@@ -8,28 +8,92 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik+Mono+One&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
-    <title>VIRGIL GARCIA - Dev WEB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>PORTFOLIO - Virgil</title>
 </head>
 
 <body>
-    <header>
-        <div class="name">
-            <span class="letter">VIRGIL</span>
-            <span class="letter">GARCIA</span>
-        </div>
-        <div class="job">
-            <span class="letter">CONCEPTEUR</span>
-            <span class="letter">DEVELOPPEUR</span>
-        </div>
 
-        <div class="scroll">
-            Please scroll
-        </div>
-    </header>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="#"><span class="colorletter">P</span>ortfolio</a><span class="dot">.</span>
+                </div>
 
+                <div class="menu">
+                    <a href="">Home</a>
+                    <a href="">Education</a>
+                    <a href="">Knowledges</a>
+                    <a href="">Contact</a>
+                </div>
+
+                <div class="menuMobile"></div>
+            </nav>
+
+            <div class="menuOpen">
+                <a href="">Home</a>
+                <a href="">Education</a>
+                <a href="">Knowledges</a>
+                <a href="">Contact</a>
+            </div>
+
+            <div class="home_container">
+                <div class="present">
+                    <div class="title">
+                        He<span class="colorletter">y</span><br>
+                        <span class="multi"></span>
+                        <div class="line"></div>
+                    </div>
+                    <div class="subtitle">
+                        Hello world ! Moi c'est Virgil, 22ans, originaire du sud de la France.
+
+                        J'ai commencé ma premiere programmation grace au jeu MineCraft a l'age de 13ans, configurant mon
+                        propre serveur je voulais également créer le site WEB du serveur.
+
+                        Aussitôt dit, aussitôt fait, j'ai commençais a regarder tuto sur tuto et puis j'ai acquis les
+                        bases HTML/CSS.
+
+                        De nature curieuse, je bidouille et me forme de maniere autodidacte depuis..
+                        J'ai décidé d'aller plus loin avec cette nouvelle passion que j'avais développé au fil du temps
+                        en m'engageant dans une formation : Le WAGON.
+
+                        J'ai appris les fondamentaux du dev front-end et back end et j'ai pu acquérir de nombreuses
+                        compétences dans
+                        le domaine !
+                    </div>
+
+                    <div class="homeButton">
+                        <div class="btn"><a href="">HIRE ME</a></div>
+                        <div class="btn"><a href="">Download CV</a></div>
+                    </div>
+                </div>
+
+                <div class="pic">
+                    <img src="images/ordi.png" alt="ordinateur" />
+                    <div class="gribouilli"></div>
+                    <div class="gribouilliDeux"></div>
+                </div>
+            </div>
+
+            <div class="scroll">
+                Please scroll
+            </div>
+        </header>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var options = {
+            strings: ['Je suis un Developpeur Web', 'En Front-end et Back-end', 'Travaillons ensemble !'],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 1500
+        };
+
+        var typed = new Typed('.multi', options);
+    </script>
     <script src="app.js"></script>
 </body>
 
