@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'POPPINS', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -22,7 +23,6 @@ body {
 
 header {
     height: 100vh;
-    overflow: hidden;
 }
 
 .titleSection {
@@ -40,6 +40,10 @@ nav {
     margin-bottom: 200px;
 }
 
+.logo {
+    position: relative;
+    z-index: 2;
+}
 
 .logo a {
     text-decoration: none;
@@ -86,14 +90,23 @@ nav {
     transform: scaleX(1);
 }
 
+.menuMobileContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: none;
+    z-index: 2;
+}
+
 .menuMobile {
     width: 30px;
     height: 3px;
     background-color: white;
     border-radius: 15px;
     position: relative;
-    display: none;
-    z-index: 2;
 }
 
 .menuMobile::before {
@@ -506,8 +519,8 @@ nav {
         display: none;
     }
 
-    .menuMobile {
-        display: block;
+    .menuMobileContainer {
+        display: flex;
     }
 
     .present {

@@ -1,8 +1,16 @@
-const btnMenu = document.querySelector('.menuMobile');
+const btnMenu = document.querySelector('.menuMobileContainer');
 const menuDeroulant = document.querySelector('.menuOpen');
-const body = document.querySelector('body');
 
 btnMenu.addEventListener('click', () => {
     menuDeroulant.classList.toggle('active');
-    body.style.overflow = 'none';
+    scrollNone();
 })
+
+function scrollNone() {
+    const body = document.querySelector('*');
+    if (body.style.overflowY === "hidden") {
+        body.style.overflowY = "visible";
+    } else {
+        body.style.overflowY = "hidden";
+    }
+}
