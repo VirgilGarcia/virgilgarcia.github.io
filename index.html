@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lib/locomotive-scroll.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
@@ -14,9 +15,9 @@
 
 <body>
 
-    <div class="container">
+    <div class="container" data-scroll-container>
         <header>
-            <nav>
+            <nav class="appear" data-scroll>
                 <div class="logo">
                     <a href="#"><span class="colorletter">V</span>IRGIL</a><span class="dot">.</span>
                 </div>
@@ -24,8 +25,8 @@
                 <div class="menu">
                     <a href="virgilgarcia.github.io">Home</a>
                     <a href="#education">Education</a>
-                    <a href="">Knowledges</a>
-                    <a href="">Contact</a>
+                    <a href="#knowledges">Knowledges</a>
+                    <a href="#contact">Contact</a>
                 </div>
 
                 <div class="menuMobileContainer">
@@ -36,55 +37,51 @@
             <div class="menuOpen">
                 <a href="virgilgarcia.github.io">Home</a>
                 <a href="#education">Education</a>
-                <a href="">Knowledges</a>
-                <a href="">Contact</a>
+                <a href="#knowledges">Knowledges</a>
+                <a href="#contact">Contact</a>
             </div>
 
-            <div class="home_container">
-                <div class="present">
+            <div class="home_container appear" data-scroll>
+                <div class="present" data-scroll data-scroll-speed="2" data-scroll-position="left"
+                    data-scroll-direction="horizontal">
                     <div class="title">
                         He<span class="colorletter">y</span><br>
                         <span class="multi"></span>
                         <div class="line"></div>
                     </div>
                     <div class="subtitle">
-                        Hello world ! Moi c'est Virgil, 22ans, originaire du sud de la France.
-
-                        J'ai commencé ma premiere programmation grace au jeu MineCraft a l'age de 13ans, configurant mon
-                        propre serveur je voulais également créer le site WEB du serveur.
-
-                        Aussitôt dit, aussitôt fait, j'ai commençais a regarder tuto sur tuto et puis j'ai acquis les
-                        bases HTML/CSS.
-
-                        De nature curieuse, je bidouille et me forme de maniere autodidacte depuis..
-                        J'ai décidé d'aller plus loin avec cette nouvelle passion que j'avais développé au fil du temps
-                        en m'engageant dans une formation : Le WAGON.
-
-                        J'ai appris les fondamentaux du dev front-end et back end et j'ai pu acquérir de nombreuses
-                        compétences dans
-                        le domaine !
+                        I'm Virgil, 22 years old, from the south of France. I started my first programming thanks to the
+                        game MineCraft at the age of 13, configuring my own server I also wanted to create the WEB site
+                        of the server. No sooner said than done, I started watching tutorial after tutorial and then I
+                        learned the basics of HTML/CSS. Curious by nature, I have been tinkering and training myself
+                        since then. I decided to go further with this new passion that I had developed over time by
+                        engaging in a training course: Le WAGON. I learned the fundamentals of front-end and back-end
+                        development and I was able to acquire many skills in the field!
                     </div>
 
                     <div class="homeButton">
-                        <div class="btn"><a href="">HIRE ME</a></div>
-                        <div class="btn"><a href="">Download CV</a></div>
+                        <div class="btn appear" id="btn1" data-scroll><a href="#contact">HIRE ME</a></div>
+                        <div class="btn appear" id="btn2" data-scroll><a href="cv_virgil_garcia.pdf">Download CV</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="pic">
+                <div class="pic" data-scroll data-scroll-speed="-1.5" data-scroll-position="top"
+                    data-scroll-direction="vertical">
                     <img src="images/ordi.png" alt="ordinateur">
                     <div class="gribouilli"></div>
                     <div class="gribouilliDeux"></div>
                 </div>
             </div>
 
-            <div class="scroll">
-                Please scroll
+            <div class="pleasescrollme appear" data-scroll>
+                <p data-scroll data-scroll-speed="3">Please scroll</p>
             </div>
         </header>
 
         <div class="content" id="education">
-            <h2 class="titleSection"><span class="colorletter">E</span>ducation<span class="dot">.</span></h2>
+            <h2 class="titleSection appear" data-scroll><span class="colorletter">E</span>ducation<span
+                    class="dot">.</span></h2>
 
             <div class="boxTimeline">
                 <div class="boxLine"></div>
@@ -92,67 +89,95 @@
                 <div class="round r2">2018</div>
                 <div class="round r3">2023</div>
 
-                <div class="box b1">
-                    <h2>Autodidacte.</h2>
-                    <p>Comme dis précedemment, depuis mes 13ans je me forme de manière autodidacte en suivant des
-                        tutoriels et en pratiquant depuis chez moi.</p>
+                <div class="box b1" data-scroll data-scroll-speed="1" data-scroll-position="left"
+                    data-scroll-direction="horizontal">
+                    <h2>self-taught.</h2>
+                    <p>As said before, since I was 13 I have been self-taught by following tutorials and practicing from
+                        home.</p>
                 </div>
-                <div class="box b2">
-                    <h2>Bac STMG | Bac avec mention</h2>
-                    <p>Management et Gestion, avec en spécialitée l'Informatique de gestion. J'y est appris de manière
-                        académique les langages HTML/CSS/SQL/PHP</p>
+                <div class="box b2" data-scroll data-scroll-speed="1.5" data-scroll-position="left"
+                    data-scroll-direction="horizontal">
+                    <h2>Bac STMG | Bac with honors</h2>
+                    <p>Management and Administration, with a specialization in IT management. I learned it so
+                        academic HTML/CSS/SQL/PHP languages</p>
                 </div>
-                <div class="box b3">
+                <div class="box b3" data-scroll data-scroll-speed="1" data-scroll-position="left"
+                    data-scroll-direction="horizontal">
                     <h2>Bootcamp Le WAGON | bac +3</h2>
-                    <p>Formation diplômante qui ma permis de maîtrisez les compétences fondamentales d'un Développeur
-                        Web</p>
+                    <p>Diploma training that allowed me to master the fundamental skills of a Web Developer</p>
                 </div>
             </div>
         </div>
 
         <div class="content" id="knowledges">
-            <h2 class="titleSection"><span class="colorletter">K</span>nowledges<span class="dot">.</span></h2>
+            <h2 class="titleSection appear" data-scroll><span class="colorletter">K</span>nowledges<span
+                    class="dot">.</span></h2>
             <div class="boxKnow">
-                <div class="boxK">
+                <div class="boxK up" data-scroll>
                     <img src="images/html.png" alt="html"><br>HTML
                     <div class="percentage" id="p1"><span class="percent">90%</span></div>
                 </div>
-                <div class="boxK">
+                <div class="boxK up" data-scroll>
                     <img src="images/css.png" alt="css"><br>CSS
                     <div class="percentage" id="p2"><span class="percent">80%</span></div>
                 </div>
-                <div class="boxK">
+                <div class="boxK up" data-scroll>
                     <img src="images/js.png" alt="js"><br>JAVASCRIPT
                     <div class="percentage" id="p3"><span class="percent">40%</span></div>
                 </div>
-                <div class="boxK">
+                <div class="boxK up" data-scroll>
                     <img src="images/php.png" alt="php"><br>PHP
                     <div class="percentage" id="p4"><span class="percent">50%</span></div>
                 </div>
-                <div class="boxK">
+                <div class="boxK up" data-scroll>
                     <img src="images/sql.png" alt="sql"><br>SQL
                     <div class="percentage" id="p5"><span class="percent">60%</span></div>
                 </div>
-                <div class="boxK">
+                <div class="boxK up" data-scroll>
                     <img src="images/github.png" alt="git"><br>GIT/GITHUB
                     <div class="percentage" id="p6"><span class="percent">70%</span></div>
                 </div>
-                <div class="boxK">
+                <div class="boxK up" data-scroll>
                     <img src="images/terminal.png" alt="terminal"><br>TERMINAL
                     <div class="percentage" id="p7"><span class="percent">65%</span></div>
                 </div>
-                <div class="boxK">
+                <div class="boxK up" data-scroll>
                     <img src="images/linux.png" alt="linux"><br>LINUX
                     <div class="percentage" id="p8"><span class="percent">55%</span></div>
                 </div>
             </div>
         </div>
+
+        <div class="content" id="contact">
+            <h2 class="titleSection appear" data-scroll><span class="colorletter">C</span>ontact<span
+                    class="dot">.</span></h2>
+
+            <div class="contactme">
+                <div class="network">
+                    <h4>Social Network</h4>
+                    <a href=""><img src="images/github.png" alt="Mon github"></a>
+                    <a href=""><img src="images/linkedin.png" alt="Mon linkedin"></a>
+                </div>
+                <div class="separator"></div>
+                <div class="assetContact">
+                    <h4>Contact Details</h4>
+                    <ul>
+                        <li><img src="images/mail.png" alt="Mon github">13viga@gmail.com</li>
+                        <li><img src="images/phone.png" alt="Mon github">06.95.76.51.88</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2023 Virgil Garcia</p>
+        </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         var options = {
-            strings: ['Je suis un Developpeur Web', 'En Front-end et Back-end', 'Travaillons ensemble !'],
+            strings: ["I'm Dev App Web", "In Front and Back-end", "Let's work together !"],
             loop: true,
             typeSpeed: 100,
             backSpeed: 80,
@@ -161,6 +186,7 @@
 
         var typed = new Typed('.multi', options);
     </script>
+    <script src="lib/locomotive-scroll.js"></script>
     <script src="app.js"></script>
 </body>
 

@@ -1,3 +1,10 @@
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+    tablet: { smooth: true },
+    smartphone: { smooth: true },
+});
+
 const btnMenu = document.querySelector('.menuMobileContainer');
 const menuDeroulant = document.querySelector('.menuOpen');
 
