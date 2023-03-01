@@ -3,21 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'POPPINS', sans-serif;
-    scroll-behavior: smooth;
 }
 
 body {
     background-color: #1c1c1c;
-    overflow-x: hidden;
     color: white;
 }
 
-body::-webkit-scrollbar {
-    width: 0;
-}
-
 .container {
-    width: 100%;
     padding: 0 50px 0 50px;
     margin: auto;
 }
@@ -61,13 +54,14 @@ header {
     transform: none;
 }
 
-#btn1 {
+#btn1.appear.is-inview {
     transition-delay: 1.5s;
 }
 
-#btn2 {
+#btn2.appear.is-inview {
     transition-delay: 2s;
 }
+
 
 
 /* NAVIGATION */
@@ -478,17 +472,17 @@ nav {
 
 .b1 {
     top: 20px;
-    left: calc(50% + 270px);
+    left: calc(50% + 70px);
 }
 
 .b2 {
     top: 280px;
-    left: calc(50% - 270px);
+    left: calc(50% - 370px);
 }
 
 .b3 {
     top: 550px;
-    left: calc(50% + 270px);
+    left: calc(50% + 70px);
 }
 
 
@@ -550,43 +544,43 @@ nav {
     transition: 0.5s ease-in-out;
 }
 
-.boxK.up.is-inview #p1::before {
+.boxKnow.is-inview #p1::before {
     transform: translateX(-10%);
     transition-delay: 0.3s;
 
 }
 
-.boxK.up.is-inview #p2::before {
+.boxKnow.is-inview #p2::before {
     transform: translateX(-20%);
     transition-delay: 0.6s;
 }
 
-.boxK.up.is-inview #p3::before {
+.boxKnow.is-inview #p3::before {
     transform: translateX(-60%);
     transition-delay: 0.9s;
 }
 
-.boxK.up.is-inview #p4:before {
+.boxKnow.is-inview #p4:before {
     transform: translateX(-50%);
     transition-delay: 1.2s;
 }
 
-.boxK.up.is-inview #p5::before {
+.boxKnow.is-inview #p5::before {
     transform: translateX(-40%);
     transition-delay: 1.5s;
 }
 
-.boxK.up.is-inview #p6::before {
+.boxKnow.is-inview #p6::before {
     transform: translateX(-30%);
     transition-delay: 1.8s;
 }
 
-.boxK.up.is-inview #p7::before {
+.boxKnow.is-inview #p7::before {
     transform: translateX(-35%);
     transition-delay: 2.1s;
 }
 
-.boxK.up.is-inview #p8::before {
+.boxKnow.is-inview #p8::before {
     transform: translateX(-45%);
     transition-delay: 2.4s;
 }
@@ -695,7 +689,7 @@ footer p {
     }
 
     .box {
-        left: calc(50% - 50px);
+        left: calc(50% - 170px);
     }
 
     .boxKnow {
@@ -739,15 +733,15 @@ footer p {
 
     .boxLine {
         position: relative;
-        left: 0px;
+        left: 200px;
     }
 
     .round {
-        left: calc(50% + 0px);
+        left: calc(50% + 200px);
     }
 
     .box {
-        left: calc(50% - 0px);
+        left: calc(50% - 170px);
     }
 
     .boxKnow {
@@ -756,6 +750,15 @@ footer p {
 
     .contactme {
         width: 97%;
+    }
+
+
+    #btn1 {
+        transition-delay: 0.5s;
+    }
+
+    #btn2 {
+        transition-delay: 1s;
     }
 }
 
@@ -776,5 +779,22 @@ footer p {
 
     .homeButton .btn a {
         font-size: 12px;
+    }
+
+    .boxLine {
+        position: relative;
+        left: 130px;
+    }
+
+    .round {
+        left: calc(50% + 130px);
+    }
+
+    .box {
+        width: 245px;
+        height: 220px;
+        font-size: 13px;
+        margin-bottom: 50px;
+        left: calc(50% - 170px);
     }
 }
