@@ -1,0 +1,35 @@
+.bull {
+    &:nth-child(1) {
+        width: 200px;
+        height: 200px;
+        opacity: 0.3;
+        filter: blur(25px);
+        border-radius: 50%;
+        background: rgb(121, 121, 121);
+        position: absolute;
+        top: 10%;
+        left: 10%;
+    }
+    &:nth-child(2) {
+        width: 500px;
+        height: 500px;
+        opacity: 0.3;
+        filter: blur(35px);
+        border-radius: 50%;
+        background: rgb(82, 82, 82);
+        position: absolute;
+        bottom: -100px;
+        left: -100px;
+    }
+    &:nth-child(3) {
+        width: 500px;
+        height: 500px;
+        opacity: 0.3;
+        filter: blur(35px);
+        border-radius: 50%;
+        background: rgb(90, 89, 89);
+        position: absolute;
+        bottom: 100px;
+        right: 100px;
+    }
+}

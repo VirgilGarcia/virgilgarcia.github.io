@@ -1,0 +1,15 @@
+//Importe les deux index des dossiers Sections et Components
+@import 'sections/index';
+@import 'components/index';
+
+
+// Global Reset
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgb(0, 0, 0);
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
