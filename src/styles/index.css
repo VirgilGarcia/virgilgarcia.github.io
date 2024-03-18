@@ -225,6 +225,38 @@
     text-align: left;
   }
 }
+.skillsContainer {
+  width: 1000px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: rgb(34, 34, 34);
+  padding: 20px;
+  text-align: center;
+}
+.skillsContainer p {
+  font-family: "light", sans-serif;
+  color: white;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  margin-bottom: 70px;
+  background-color: transparent;
+}
+.skillsContainer .skillsList {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 50px;
+  background-color: transparent;
+}
+.skillsContainer .skillsList .skill {
+  background-color: transparent;
+  text-align: center;
+}
+.skillsContainer .skillsList .skill img {
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+}
+
 .bull:nth-child(1) {
   width: 200px;
   height: 200px;
@@ -246,6 +278,12 @@
   position: absolute;
   bottom: 100px;
   right: 100px;
+}
+
+footer {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin: 50px 0;
 }
 
 @font-face {
