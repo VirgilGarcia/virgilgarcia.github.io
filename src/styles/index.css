@@ -1,4 +1,4 @@
-.banner {
+.HeroBannerContainer {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -7,7 +7,7 @@
   align-items: center;
   overflow: hidden;
 }
-.banner h2 {
+.HeroBannerContainer h1 {
   position: absolute;
   font-size: 1.5vw;
   background-color: transparent;
@@ -15,33 +15,38 @@
   left: 30px;
   padding: 20px;
 }
-.banner h1 {
+.HeroBannerContainer .globalTitle {
   position: absolute;
   display: flex;
-  gap: 10px;
+  gap: 50px;
   background-color: transparent;
   padding: 20px;
 }
-.banner h1 .welcome {
-  font-size: 1rem;
+.HeroBannerContainer .globalTitle p {
+  background-color: transparent;
+  font-size: 2rem;
   position: absolute;
   top: 0;
   left: 20px;
   opacity: 0;
   animation: appear 2s 1s forwards;
 }
-.banner h1 span {
+.HeroBannerContainer .globalTitle #title1, .HeroBannerContainer .globalTitle #title2 {
+  background-color: transparent;
+}
+.HeroBannerContainer .globalTitle #title1 span, .HeroBannerContainer .globalTitle #title2 span {
+  font-family: "black", sans-serif;
   color: rgb(255, 255, 255);
-  font-size: 4.5vw;
+  font-size: 10vw;
   background-color: transparent;
   text-shadow: 0 0 10px rgb(0, 0, 0);
   transition: all 0.3s ease-in-out;
   opacity: 0;
 }
-.banner h1 .animActivate {
+.HeroBannerContainer .globalTitle .animActivate {
   animation: animSpan 2s 1s forwards;
 }
-.banner #scroll {
+.HeroBannerContainer #scroll {
   position: absolute;
   font-size: 2.5vw;
   font-weight: 800;
@@ -81,10 +86,143 @@
     transform: translateX(50%) translateY(0);
   }
   50% {
-    transform: translateX(50%) translateY(20px);
+    transform: translateX(50%) translateY(10px);
   }
   100% {
     transform: translateX(50%) translateY(0);
+  }
+}
+@media (max-width: 1050px) {
+  .HeroBannerContainer h1 {
+    font-size: 7.5vw;
+    top: 10px;
+    left: 10px;
+  }
+  .HeroBannerContainer .globalTitle {
+    flex-direction: column;
+    gap: 0;
+  }
+  .HeroBannerContainer .globalTitle p {
+    font-size: 7.5vw;
+  }
+  .HeroBannerContainer .globalTitle #title1 span, .HeroBannerContainer .globalTitle #title2 span {
+    font-size: 29.5vw;
+  }
+  .HeroBannerContainer #scroll {
+    font-size: 12vw;
+  }
+}
+.AboutMeContainer {
+  margin: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.AboutMeContainer .sectionContent {
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: repeat(5, 2fr);
+  gap: 20px;
+  height: 100%;
+}
+.AboutMeContainer .sectionContent .box {
+  border-radius: 20px;
+  height: auto;
+  background-color: rgb(34, 34, 34);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  line-height: 1.25;
+  text-align: center;
+}
+.AboutMeContainer .sectionContent .box img {
+  border-radius: 20px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.AboutMeContainer .sectionContent .box span {
+  margin-top: 20px;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  background-color: transparent;
+}
+.AboutMeContainer .sectionContent .box #index {
+  font-size: 5rem;
+  color: #00a5c2;
+  font-family: "black";
+}
+.AboutMeContainer .sectionContent .box #degree {
+  font-size: 2rem;
+  font-family: "extraBold";
+}
+.AboutMeContainer .sectionContent .box:nth-child(1) {
+  grid-area: 1/1/2/2;
+  padding: 0;
+}
+.AboutMeContainer .sectionContent .box:nth-child(2) {
+  grid-area: 2/1/3/3;
+  text-align: left;
+}
+.AboutMeContainer .sectionContent .box:nth-child(3) {
+  grid-area: 3/2/3/3;
+}
+.AboutMeContainer .sectionContent .box:nth-child(4) {
+  grid-area: 4/1/4/2;
+}
+.AboutMeContainer .sectionContent .box:nth-child(5) {
+  grid-area: 5/2/6/2;
+}
+
+@media (max-width: 1050px) {
+  .AboutMeContainer {
+    margin: 100px 0;
+  }
+  .AboutMeContainer .sectionContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  .AboutMeContainer .sectionContent .box {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.25;
+    text-align: center;
+  }
+  .AboutMeContainer .sectionContent .box img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .AboutMeContainer .sectionContent .box span {
+    margin-top: 20px;
+    letter-spacing: 1px;
+    line-height: 1.25;
+    background-color: transparent;
+  }
+  .AboutMeContainer .sectionContent .box #index {
+    font-size: 4rem;
+  }
+  .AboutMeContainer .sectionContent .box #degree {
+    font-size: 1.5rem;
+  }
+  .AboutMeContainer .sectionContent .box:nth-child(1) {
+    padding: 0;
+    max-height: 250px;
+  }
+  .AboutMeContainer .sectionContent .box:nth-child(2) {
+    text-align: left;
   }
 }
 .bull:nth-child(1) {
@@ -104,30 +242,39 @@
   opacity: 0.3;
   filter: blur(35px);
   border-radius: 50%;
-  background: rgb(82, 82, 82);
-  position: absolute;
-  bottom: -100px;
-  left: -100px;
-}
-.bull:nth-child(3) {
-  width: 500px;
-  height: 500px;
-  opacity: 0.3;
-  filter: blur(35px);
-  border-radius: 50%;
   background: rgb(90, 89, 89);
   position: absolute;
   bottom: 100px;
   right: 100px;
 }
 
+@font-face {
+  font-family: "regular";
+  src: url("fonts/Thunder-LC.otf");
+}
+@font-face {
+  font-family: "light";
+  src: url("fonts/Thunder-ExtraLightLC.otf");
+}
+@font-face {
+  font-family: "extraBold";
+  src: url("fonts/Thunder-ExtraBoldLC.otf");
+}
+@font-face {
+  font-family: "black";
+  src: url("fonts/Thunder-BlackLC.otf");
+}
+@font-face {
+  font-family: "medium";
+  src: url("fonts/Thunder-MediumLC.otf");
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background: rgb(0, 0, 0);
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "medium", sans-serif;
 }
 
 /*# sourceMappingURL=index.css.map */

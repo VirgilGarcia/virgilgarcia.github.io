@@ -3,6 +3,32 @@
 @import 'components/index';
 
 
+@font-face {
+  font-family: 'regular';
+  src: url('fonts/Thunder-LC.otf');
+}
+
+@font-face {
+  font-family: 'light';
+  src: url('fonts/Thunder-ExtraLightLC.otf');
+}
+
+@font-face {
+  font-family: 'extraBold';
+  src: url('fonts/Thunder-ExtraBoldLC.otf');
+}
+
+@font-face {
+  font-family: 'black';
+  src: url('fonts/Thunder-BlackLC.otf');
+}
+
+@font-face {
+  font-family: 'medium';
+  src: url('fonts/Thunder-MediumLC.otf');
+}
+
+
 // Global Reset
 
 * {
@@ -11,5 +37,5 @@
     box-sizing: border-box;
     background: rgb(0, 0, 0);
     color: white;
-    font-family: "Poppins", sans-serif;
+    font-family: "medium", sans-serif;
   }
