@@ -1,0 +1,37 @@
+.timeline {
+    width: 1000px;
+    height: 2000px;
+    margin: 100px auto;
+    position: relative;
+    background-color: red;
+
+    .conception {
+        width: 100px;
+        height: 100px;
+        background-color: #09ff00;
+        color: #000;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .deploiment {
+        width: 100px;
+        height: 100px;
+        background-color: #ddff00;
+        color: #000;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .test {
+        position: absolute;
+        top: 0;
+        left: 150px;
+        width: 150px;
+        height: 150px;
+        background-color: #f5f5f5;
+        border-radius: 50%;
+    }
+}

@@ -38,12 +38,13 @@ const HeroBanner = () => {
                 </div>
 
                 <div id="title2">
+                    <span>D</span>
                     <span>E</span>
-                    <span>N</span>
-                    <span>G</span>
-                    <span>I</span>
-                    <span>N</span>
+                    <span>V</span>
                     <span>E</span>
+                    <span>L</span>
+                    <span>O</span>
+                    <span>P</span>
                     <span>E</span>
                     <span>R</span>
                 </div>
