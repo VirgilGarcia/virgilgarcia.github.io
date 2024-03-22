@@ -3,7 +3,9 @@ import HeroBanner from "./sections/HeroBanner";
 import AboutMe from './sections/AboutMe';
 import Skills from './sections/Skills';
 import Footer from './components/Footer';
-import Timeline from './components/Timeline';
+import Timeline from './sections/Timeline';
+import Project from './sections/Project';
+import Contact from './sections/Contact';
 
 const App = () => {
     return (
@@ -12,6 +14,8 @@ const App = () => {
             <AboutMe />
             <Skills />
             <Timeline />
+            <Project />
+            <Contact />
             <Footer />
         </>
     );

@@ -54,14 +54,25 @@
     }
     
     #scroll {
+        text-align: center;
         position: absolute;
-        font-size: 2.5vw;
-        font-weight: 800;
         background-color: transparent;
-        bottom: 15px;
+        bottom: 25px;
         right: 50%;
         transform: translateX(50%);
         animation: animate 2s infinite;
+
+        span {
+            &:nth-child(1) {
+                font-size: 1.5vw;
+                font-family: "light", sans-serif;
+            }
+
+            &:nth-child(2) {
+                font-size: 2.5vw;
+                font-weight: 800;
+            }
+        }
     }
 }
 
@@ -132,7 +143,15 @@
         }
         
         #scroll {
-            font-size: 12vw;
+            span {
+                &:nth-child(1) {
+                    font-size: 5.5vw;
+                }
+    
+                &:nth-child(2) {
+                    font-size: 12vw;
+                }
+            }
         }
     }
 }

@@ -50,7 +50,11 @@ const HeroBanner = () => {
                 </div>
 
             </div>
-            <p id="scroll">⌵</p>
+            <div id="scroll">
+                <span>scroll</span>
+                <br />
+                <span>⌵</span>
+            </div>
         </div>
     );
 };

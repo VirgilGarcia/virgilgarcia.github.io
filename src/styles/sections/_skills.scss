@@ -33,3 +33,17 @@
         }
     }
 }
+
+//RESPONSIVE 
+
+@media screen and (max-width: 1050px) {
+    .skillsContainer {
+        width: 90%;
+        padding: 30px;
+
+        .skillsList {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+    }
+}

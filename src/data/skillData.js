@@ -96,7 +96,7 @@ export const skillData = [
     skill: "GIT/GITHUB",
   },
   {
-    id: 16,
+    id: 18,
     url_picture: "/assets/gitlab.svg",
     cat: "divers",
     skill: "GITLAB",
