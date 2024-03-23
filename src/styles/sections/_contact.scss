@@ -1,0 +1,107 @@
+.contactContainer {
+    width: 1000px;
+    margin: 50px auto;
+    margin-top: 250px;
+
+    .contact {
+        margin-top: 50px;
+    
+        .contact-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            .mail {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                padding-bottom: 150px;
+        
+                .cercle {
+        
+                    #text {
+                        height: 250px;
+                        font-size: 25px;
+                        animation: spin 20s linear infinite;
+            
+                        span {
+                        position: absolute;
+                        transform-origin: 0 125px;
+                        }
+                    }
+        
+                    @keyframes spin {
+                        from {
+                            transform: rotate(0deg);
+                        } to {
+                            transform: rotate(-360deg);
+                        }
+                    }
+                }
+            }
+        }
+    
+        .networks {
+            display: flex;
+            gap: 50px;
+            padding-top: 150px;
+    
+            a {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-size: 25px;
+                color: white;
+                text-decoration: none;
+                transition: 0.3s;
+    
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+
+                &:hover {
+                    color: #00A5C2;
+                }
+            }
+        }
+    }
+}
+
+//RESPONSIVE
+
+@media screen and (max-width: 1050px) {
+    .contactContainer {
+        width: 90%;
+
+        .contact {
+            .contact-content {
+                .mail {
+                    .cercle {
+                        #text {
+                            height: 200px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                .networks {
+                    flex-direction: column;
+                    gap: 25px;
+
+                    a {
+                        font-size: 15vw;
+
+                        img {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

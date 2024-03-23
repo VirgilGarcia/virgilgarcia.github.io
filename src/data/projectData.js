@@ -1,38 +1,38 @@
 export const projectData = [
   {
     id: 1,
-    url_picture: "images/diginustrale.png",
-    name: "DIGINUSTRALE",
-    front: "HTML, CSS/SCSS et JS (Stimulus)",
+    url_picture: "/assets/dev-a-licious.png",
+    name: "DEV-A-LICIOUS",
+    front: "HTML, SCSS et JS",
     back: "RUBY ON RAILS et POSTGRESQL",
-    description: "Plateforme permettant la gestion d'un cheptel et de sa production pour éleveurs Porcins AOP.",
-    produced: "Projet scolaire réalisé en groupe."
+    description: "Marketplace permettant de proposer ou de recuter un programmeurs.",
+    produced: "Projet scolaire réalisé en groupe.",
   },
   {
     id: 2,
-    url_picture: "images/dev-a-licious.png",
-    name: "DEV-A-LICIOUS",
-    front: "HTML, CSS/SCSS et JS (Stimulus)",
-    back: "RUBY ON RAILS et POSTGRESQL",
-    description: "Marketplace permettant de proposer ou de recuter un programmeurs.",
-    produced: "Projet scolaire réalisé en groupe."
+    url_picture: "/assets/mojo.png",
+    name: "MOJO",
+    front: "KOTLIN, JETPACK COMPOSER",
+    back: "JAVA SPRINGBOOT et POSTGRESQL",
+    description: "Application mobile permettant de scanner, lister et payer ses courses sur téléphone.",
+    produced: "Projet scolaire réalisé en groupe.",
   },
   {
     id: 3,
-    url_picture: "images/lamusclerie.png",
+    url_picture: "/assets/lamusclerie.png",
     name: "LAMUSCLERIE",
-    front: "HTML, CSS/SCSS et JS",
+    front: "HTML, SCSS et JS",
     back: "PHP et MYSQL",
     description: "Site internet proposant des articles et des programmes sportif.",
-    produced: "Projet réalisé en partenariat avec un ami."
+    produced: "Projet réalisé en partenariat avec un ami.",
   },
   {
     id: 4,
-    url_picture: "images/portfolio.png",
-    name: "Mon PORTFOLIO",
-    front: "HTML, CSS/SCSS et REACT",
-    back: "Site vitrine",
-    description: "Tout simplement le site sur lequel vous êtes :)",
-    produced: "Projet réalisé pour et par moi même."
+    url_picture: "/assets/timemanager.png",
+    name: "TIME MANAGER",
+    front: "HTML, SCSS et REACTJS",
+    back: "ELIXIR et POSTGRESQL",
+    description: "SaaS permettant de gérer son temps de travail et d'avoir un suivi RH.",
+    produced: "Projet scolaire réalisé en groupe.",
   }
 ]

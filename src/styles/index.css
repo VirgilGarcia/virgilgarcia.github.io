@@ -277,6 +277,156 @@
     gap: 30px;
   }
 }
+.projectContainer {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  justify-content: center;
+}
+.projectContainer .card {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-style: "preserve-3d";
+}
+.projectContainer .card .card-image {
+  width: 100%;
+  height: 100%;
+}
+.projectContainer .card .card-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+.projectContainer .card .card-content {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: flex-start;
+}
+.projectContainer .card .card-content h3 {
+  font-size: 3vw;
+  color: white;
+}
+.projectContainer .card .card-content h3 span {
+  font-family: "light", sans-serif;
+  font-size: 1.5vw;
+}
+.projectContainer .card .card-content p {
+  font-size: 1.5vw;
+  color: white;
+}
+
+@media screen and (max-width: 1050px) {
+  .projectContainer {
+    width: 90%;
+  }
+  .projectContainer .card .card-content {
+    padding: 10px 0;
+  }
+  .projectContainer .card .card-content h3 {
+    font-size: 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .projectContainer .card .card-content h3 span {
+    font-size: 4.5vw;
+  }
+  .projectContainer .card .card-content p {
+    font-size: 6.5vw;
+  }
+}
+.contactContainer {
+  width: 1000px;
+  margin: 50px auto;
+  margin-top: 250px;
+}
+.contactContainer .contact {
+  margin-top: 50px;
+}
+.contactContainer .contact .contact-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactContainer .contact .contact-content .mail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-bottom: 150px;
+}
+.contactContainer .contact .contact-content .mail .cercle #text {
+  height: 250px;
+  font-size: 25px;
+  animation: spin 20s linear infinite;
+}
+.contactContainer .contact .contact-content .mail .cercle #text span {
+  position: absolute;
+  transform-origin: 0 125px;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.contactContainer .contact .networks {
+  display: flex;
+  gap: 50px;
+  padding-top: 150px;
+}
+.contactContainer .contact .networks a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.contactContainer .contact .networks a img {
+  width: 25px;
+  height: 25px;
+}
+.contactContainer .contact .networks a:hover {
+  color: #00A5C2;
+}
+
+@media screen and (max-width: 1050px) {
+  .contactContainer {
+    width: 90%;
+  }
+  .contactContainer .contact .contact-content .mail .cercle #text {
+    height: 200px;
+    font-size: 20px;
+  }
+  .contactContainer .contact .contact-content .networks {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .contactContainer .contact .contact-content .networks a {
+    font-size: 15vw;
+  }
+  .contactContainer .contact .contact-content .networks a img {
+    width: 50px;
+    height: 50px;
+  }
+}
 .bull:nth-child(1) {
   width: 200px;
   height: 200px;

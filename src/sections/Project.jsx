@@ -1,10 +1,15 @@
 import React from "react";
+import CardProject from "../components/CardProject";
+import { projectData } from '../data/projectData';
 
 const Project = () => {
 
     return (
-        <div className="project">
-            <h1>Projet</h1>
+        <div className="projectContainer">
+            {projectData.map((project) => (
+                <CardProject key={project.id} project={project} />
+            ))}
+
         </div>
     );
 }
