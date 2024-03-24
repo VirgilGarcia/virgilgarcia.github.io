@@ -5,7 +5,7 @@ export const projectData = [
     name: "DEV-A-LICIOUS",
     front: "HTML, SCSS et JS",
     back: "RUBY ON RAILS et POSTGRESQL",
-    description: "Marketplace permettant de proposer ou de recuter un programmeurs.",
+    description: "Marketplace permettant de proposer ou de recruter des programmeurs.",
     produced: "Projet scolaire réalisé en groupe.",
   },
   {
@@ -14,7 +14,7 @@ export const projectData = [
     name: "MOJO",
     front: "KOTLIN, JETPACK COMPOSER",
     back: "JAVA SPRINGBOOT et POSTGRESQL",
-    description: "Application mobile permettant de scanner, lister et payer ses courses sur téléphone.",
+    description: "Application mobile permettant de scanner, lister et payer ses courses sur mobile.",
     produced: "Projet scolaire réalisé en groupe.",
   },
   {

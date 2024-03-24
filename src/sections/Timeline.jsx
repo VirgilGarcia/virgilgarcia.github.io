@@ -20,7 +20,7 @@ const Timeline = () => {
           containerHeight = 2750;
       } else {
           containerWidth = 250; 
-          containerHeight = 2750;
+          containerHeight = 1750;
       }
 
       gsap.to(scrollBall.current, {
@@ -53,7 +53,7 @@ const Timeline = () => {
             <div className="step">LE MAQUETTAGE</div>
             <div className="step">LE DEVELOPPEMENT</div>
             <div className="step">LES TESTS</div>
-            <div className="step">LE DEPLOIMENT</div>
+            <div className="step">LE DEPLOIEMENT</div>
         </div>
     );
 };

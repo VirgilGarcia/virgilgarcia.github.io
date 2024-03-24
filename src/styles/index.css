@@ -20,7 +20,7 @@
   display: flex;
   gap: 50px;
   background-color: transparent;
-  padding: 20px;
+  padding: 40px 20px;
 }
 .HeroBannerContainer .globalTitle p {
   background-color: transparent;
@@ -286,12 +286,12 @@
   justify-content: center;
 }
 .projectContainer .card {
+  margin: auto;
   width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform-style: "preserve-3d";
 }
 .projectContainer .card .card-image {
   width: 100%;
@@ -450,6 +450,10 @@
   right: 100px;
 }
 
+.bull {
+  display: none;
+}
+
 footer {
   text-align: center;
   color: rgb(255, 255, 255);
@@ -520,6 +524,7 @@ footer {
 @media screen and (max-width: 1050px) {
   .timeline {
     width: 100%;
+    height: 2000px;
     margin: 100px auto;
   }
   .timeline .step {
