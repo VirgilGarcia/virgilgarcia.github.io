@@ -19,14 +19,13 @@ const Contact = () => {
           <div className="contact-content">
             <div className="mail">
               <div className="cercle">
-                <h1 id="text">TRAVAILLONS-ENSEMBLE-</h1>
+                <h1 id="text">TRAVAILLONS-ENSEMBLE</h1>
               </div>
 
               <div className="networks">
                 <a href="https://linkedin.com/in/virgil-garcia-b58796222"><img src="/assets/linkedin.png" alt="network"/> Linkedin</a>
                 <a href="https://github.com/VirgilGarcia"><img src="/assets/github.png" alt="network"/> GitHub</a>
                 <a href={`mailto:${emailAddress}`}><img src="/assets/mail.png" alt="network"/> EMail</a>
-                <a href="https://www.malt.fr/profile/virgilgarcia1"><img src="/assets/malt.png" alt="network"/> Malt</a>
               </div>
             </div>
           </div>

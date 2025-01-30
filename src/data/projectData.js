@@ -34,5 +34,32 @@ export const projectData = [
     back: "ELIXIR et POSTGRESQL",
     description: "SaaS permettant de gérer son temps de travail et d'avoir un suivi RH.",
     produced: "Projet scolaire réalisé en groupe.",
-  }
+  },
+  {
+    id: 5,
+    url_picture: "/assets/convoyor.png",
+    name: "THE CONVOYOR",
+    front: "FLUTTER, C++, M5Stack GO",
+    back: "MQTT, ERP, DOCKER",
+    description: "Architecture d'un nouveau système de convoyage de colis pour une industrie géré par application.",
+    produced: "Projet scolaire réalisé en groupe.",
+  },
+  {
+    id: 6,
+    url_picture: "/assets/casino.png",
+    name: "LE MONACO VR",
+    front: "UNITY, C#",
+    back: "BLOCKCHAIN, DOCKER",
+    description: "Casino de jeux de hasard multijoueur en réalité virtuelle.",
+    produced: "Projet scolaire réalisé en groupe.",
+  },
+  {
+    id: 100,
+    url_picture: "/assets/coming.gif",
+    name: "Et bien d'autres projets... Peut-être le vôtre ? 👀",
+    front: "Un front comme un développeur après 10 cafés ☕",
+    back: "un back aussi solide qu'une mise en prod un vendredi soir à 18h 🖥️",
+    description: "",
+    produced: "",
+},
 ]

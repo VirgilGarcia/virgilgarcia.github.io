@@ -49,11 +49,11 @@ const Timeline = () => {
     return (
         <div className="timeline" ref={container}>
             <div className="scrollBall" ref={scrollBall}>🚀</div>
-            <div className="step">LA CONCEPTION</div>
-            <div className="step">LE MAQUETTAGE</div>
-            <div className="step">LE DEVELOPPEMENT</div>
-            <div className="step">LES TESTS</div>
-            <div className="step">LE DEPLOIEMENT</div>
+            <div className="step">📌 Planification & Analyse</div>
+            <div className="step">🖌️ Conception & Architecture</div>
+            <div className="step">💻 Développement & Intégration</div>
+            <div className="step">🔍 Tests, Sécurité & Validation</div>
+            <div className="step">🚀 Déploiement & Scalabilité</div>
         </div>
     );
 };

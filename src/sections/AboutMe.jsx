@@ -6,17 +6,16 @@ export default class AboutMe extends Component {
       <div className='AboutMeContainer'>
         <div className="sectionContent">
           <div className="box">
-            <img src="/assets/moi.jpg" alt="Moi même" />
+          <img src="/assets/moi.png" alt="Moi même" style={{ filter: "grayscale(100%)" }} />
           </div>
           <div className="box">
-            Hello World !<br /><br />
-            Moi c'est Virgil, 23 ans, Français et passionné IT <br />
-            J'avais 13 ans quand j'ai découvert la programmation grâce à Minecraft. J'ai alors décidé de compléter l'expérience avec un site web.<br />
-            J'ai exploré différents tutoriels pour apprendre le HTML et le CSS, et ma curiosité a fait le reste.<br />
-            Mon aventure s'est intensifiée avec LE WAGON et se poursuit chez EPITECH Marseille. J'ai plongé dans le développement front-end et back-end, et j'ai accumulé un ensemble varié de compétences.
-            Aujourd'hui, je maîtrise différentes technologies que je ne cesse d'approfondir tous les jours.<br /><br />
-            Passionné par la création et la résolution de défis techniques, mon approche priorise toujours l'utilisateur en cherchant à créer des expériences en ligne engageantes et faciles d'utilisation.
-            Toujours en quête d'apprentissage et de nouveaux défis, je suis ouvert à de nouvelles opportunités pour continuer à me perfectionner en tant que jeune développeur. Je suis enthousiaste à l'idée de contribuer à des projets passionnants dans le domaine.
+              Bonjour et bienvenue !<br /><br />
+              Je m'appelle Virgil et je suis passionné par l’univers de l’IT depuis mon plus jeune âge.<br />
+              Mon parcours a débuté à l’âge de 12 ans avec Minecraft, où j’ai découvert la programmation.<br/>Fasciné par le potentiel du développement, j’ai rapidement élargi mes compétences en créant mon premier site web. <br />
+              <br/>Autodidacte à mes débuts, j’ai exploré HTML, CSS, JavaScript et PHP à travers divers projets personnels avant de me former plus en profondeur avec LE WAGON en 2023. J’ai ensuite poursuivi mon apprentissage chez EPITECH, où je me spécialise en tant qu’Architecte Logiciel avec un focus sur l’IoT. Ces expériences m’ont permis d’acquérir une expertise en développement full-stack, en conception d’architectures logicielles et en systèmes connectés.<br /><br />
+              Aujourd’hui, je maîtrise un large éventail de technologies et cherche constamment à approfondir mes compétences.<br />
+              Curieux et toujours en quête de nouveaux défis, j’aime explorer les différents domaines de l’informatique. Mon objectif est de concevoir des architectures logicielles efficaces et innovantes, adaptées aux besoins métiers et technologiques. <br /><br />
+              Je serais ravi d’échanger autour de sujets techniques et de partager mon expertise au sein d’une équipe dynamique !<br />
           </div>
           <div className="box">
             <span id="index">1</span>

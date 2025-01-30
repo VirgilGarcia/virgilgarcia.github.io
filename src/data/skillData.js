@@ -42,6 +42,12 @@ export const skillData = [
     skill: "KOTLIN",
   },
   {
+    id: 16,
+    url_picture: "/assets/flutter.png",
+    cat: "front",
+    skill: "FLUTTER",
+  },
+  {
     id: 9,
     url_picture: "/assets/ruby.svg",
     cat: "back",
@@ -60,10 +66,28 @@ export const skillData = [
     skill: "PHP",
   },
   {
-    id: 16,
-    url_picture: "/assets/phoenix.svg",
+    id: 20,
+    url_picture: "/assets/java.svg",
     cat: "back",
-    skill: "PHOENIX",
+    skill: "JAVA",
+  },
+  {
+    id: 21,
+    url_picture: "/assets/c++.png",
+    cat: "divers",
+    skill: "C++",
+  },
+  {
+    id: 22,
+    url_picture: "/assets/csharp.png",
+    cat: "divers",
+    skill: "C#",
+  },
+  {
+    id: 19,
+    url_picture: "/assets/python.png",
+    cat: "divers",
+    skill: "PYTHON",
   },
   {
     id: 6,
@@ -79,9 +103,9 @@ export const skillData = [
   },
   {
     id: 8,
-    url_picture: "/assets/phpmyadmin.svg",
+    url_picture: "/assets/sqlite.jpeg",
     cat: "bdd",
-    skill: "PHPMYADMIN",
+    skill: "SQLITE",
   },
   {
     id: 17,
@@ -102,9 +126,21 @@ export const skillData = [
     skill: "GITLAB",
   },
   {
+    id: 23,
+    url_picture: "/assets/nodejs.png",
+    cat: "divers",
+    skill: "NODE.JS",
+  },
+  {
+    id: 24,
+    url_picture: "/assets/server.png",
+    cat: "divers",
+    skill: "NGINX/APACHE",
+  },
+  {
     id: 12,
     url_picture: "/assets/bash.svg",
     cat: "divers",
-    skill: "BASH",
+    skill: "BASH/SHELL",
   },
 ]

@@ -10,7 +10,7 @@ export default class Skill extends Component {
   render() {
     return (
       <div className='skillsContainer'>
-        <p>Explorez mes diverses compétences et suivez mon voyage numérique !</p>
+        <p>Voici un aperçu de mon stack technologique (et bien plus encore !)</p>
         <div className='skillsList'>
           {this.state.skills.map(skill => 
             <span key={skill.id} className='skill'>
