@@ -1,0 +1,340 @@
+@use 'sass:map';
+
+$weights: (
+  'ExtraLight': 200,
+  '': 400,
+  'Medium': 500,
+  'ExtraBold': 800,
+  'Black': 900,
+);
+
+@each $name, $weight in $weights {
+  @font-face {
+    font-family: 'Thunder';
+    src: url('../assets/fonts/Thunder-#{$name}LC.otf') format('opentype');
+    font-weight: $weight;
+    font-display: swap;
+  }
+}
+
+:root {
+  --bg: #0a0a0b;
+  --surface: #131315;
+  --surface-2: #1a1a1d;
+  --line: rgb(255 255 255 / 0.09);
+  --text: #ededed;
+  --muted: #8b8b92;
+  --accent: #5ee7ff;
+  --accent-2: #ff5a1f;
+
+  --font-display: 'Thunder', 'Impact', sans-serif;
+  --font-body: 'Inter Variable', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --radius: 1.25rem;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: auto;
+}
+
+// Classes ajoutées par Lenis
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+em {
+  font-style: normal;
+  color: var(--muted);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: clamp(6rem, 14vw, 12rem);
+}
+
+// ---------- Typo partagée ----------
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+
+  span {
+    color: var(--accent);
+  }
+
+  &::before {
+    content: '';
+    width: 2rem;
+    height: 1px;
+    background: currentColor;
+  }
+}
+
+.section-head {
+  margin-bottom: clamp(3rem, 7vw, 6rem);
+
+  &__title {
+    margin-top: 1.5rem;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(3.25rem, 9vw, 8.5rem);
+    line-height: 0.88;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+  }
+}
+
+// ---------- Boutons ----------
+
+.btn {
+  --h: 3.25rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  height: var(--h);
+  padding-inline: 1.5rem;
+  border-radius: 999px;
+  background: var(--text);
+  color: var(--bg);
+  font-weight: 600;
+  font-size: 0.95rem;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color 0.4s var(--ease-out);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--accent);
+    transform: translateY(101%);
+    border-radius: inherit;
+    transition: transform 0.5s var(--ease-out);
+  }
+
+  span {
+    transition: transform 0.4s var(--ease-out);
+  }
+
+  &:hover {
+    &::before {
+      transform: translateY(0);
+    }
+    span {
+      transform: translateX(4px);
+    }
+  }
+
+  &--small {
+    --h: 2.5rem;
+    padding-inline: 1.1rem;
+    font-size: 0.85rem;
+  }
+
+  &--big {
+    --h: clamp(4rem, 8vw, 5.5rem);
+    padding-inline: clamp(1.75rem, 4vw, 2.75rem);
+    font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  }
+}
+
+.magnetic {
+  display: inline-block;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  li {
+    padding: 0.35rem 0.8rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+}
+
+.tag {
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: rgb(94 231 255 / 0.1);
+  color: var(--accent);
+}
+
+// ---------- Effets globaux ----------
+
+.grain {
+  position: fixed;
+  inset: -50%;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 1s steps(4) infinite;
+}
+
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-3%, 2%); }
+  50% { transform: translate(2%, -3%); }
+  75% { transform: translate(-2%, -1%); }
+}
+
+.has-cursor,
+.has-cursor * {
+  cursor: none !important;
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  border-radius: 50%;
+  background: #fff;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  display: none;
+  place-items: center;
+  transition:
+    width 0.35s var(--ease-out),
+    height 0.35s var(--ease-out),
+    margin 0.35s var(--ease-out),
+    opacity 0.3s;
+
+  .has-cursor & {
+    display: grid;
+  }
+
+  &::after {
+    content: attr(data-label);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #000;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  &.is-hover {
+    width: 56px;
+    height: 56px;
+    margin: -28px 0 0 -28px;
+  }
+
+  &.is-hover[data-label]:not([data-label=''])::after {
+    opacity: 1;
+  }
+
+  &.is-hover[data-label]:not([data-label='']) {
+    width: 72px;
+    height: 72px;
+    margin: -36px 0 0 -36px;
+  }
+
+  &.is-hidden {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
