@@ -244,6 +244,7 @@ em {
 
 .tag {
   padding: 0.25rem 0.7rem;
+  white-space: nowrap;
   border-radius: 999px;
   background: rgb(94 231 255 / 0.1);
   color: var(--accent);

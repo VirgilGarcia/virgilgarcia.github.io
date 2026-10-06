@@ -16,7 +16,7 @@ const rows = [all.slice(0, half), all.slice(half)];
 const Skills = () => (
   <section className="section skills" id="stack">
     <div className="container">
-      <SectionHeading index="02" kicker="Stack technique">
+      <SectionHeading index="04" kicker="Stack technique">
         Les outils que j’utilise
         <br />
         <em>(et bien plus encore).</em>

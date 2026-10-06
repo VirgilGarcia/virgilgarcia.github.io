@@ -39,7 +39,7 @@ const Contact = () => {
         </div>
 
         <p className="kicker" data-reveal>
-          <span>05</span> Contact
+          <span>06</span> Contact
         </p>
         <h2 className="contact__title" data-reveal>
           Un projet en tête ?

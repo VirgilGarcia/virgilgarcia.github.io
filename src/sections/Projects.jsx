@@ -1,9 +1,9 @@
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
-import { gsap } from '../lib/gsap';
-import { projects } from '../data/content';
-import { handleAnchor } from '../hooks/useSmoothScroll';
+import { gsap, ScrollTrigger } from '../lib/gsap';
+import { archive, cases } from '../data/content';
 import SectionHeading from '../components/SectionHeading';
+import Diagram from '../components/Diagram';
 
 const pad = (n) => String(n).padStart(2, '0');
 
@@ -23,17 +23,24 @@ const Projects = () => {
             scrollTrigger: { trigger: cards[i + 1], start: 'top bottom', end: 'top 20%', scrub: true },
           });
         });
-        gsap.utils.toArray('.project__media img').forEach((img) => {
-          gsap.fromTo(
-            img,
-            { yPercent: -6 },
-            {
-              yPercent: 6,
-              ease: 'none',
-              scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true },
-            }
-          );
-        });
+      });
+
+      // Position collante de chaque carte : si elle est plus haute que l'écran, elle
+      // défile jusqu'à montrer son bas avant de se figer, pour ne rien masquer de son contenu.
+      gsap.matchMedia().add('(min-width: 901px)', () => {
+        const cards = gsap.utils.toArray('.project');
+        const setTops = () => {
+          cards.forEach((card, i) => {
+            const ideal = 96 + i * 16;
+            card.style.top = `${Math.min(ideal, window.innerHeight - card.offsetHeight - 24)}px`;
+          });
+        };
+        setTops();
+        ScrollTrigger.addEventListener('refreshInit', setTops);
+        return () => {
+          ScrollTrigger.removeEventListener('refreshInit', setTops);
+          cards.forEach((card) => (card.style.top = ''));
+        };
       });
     },
     { scope: root }
@@ -42,54 +49,58 @@ const Projects = () => {
   return (
     <section className="section projects" id="projects" ref={root}>
       <div className="container">
-        <SectionHeading index="04" kicker="Projets sélectionnés">
-          Ce que j’ai construit,
+        <SectionHeading index="03" kicker="Réalisations">
+          Des systèmes en production,
           <br />
-          <em>seul ou en équipe.</em>
+          <em>pas des maquettes.</em>
         </SectionHeading>
 
         <div className="projects__list">
-          {projects.map((p, i) => (
+          {cases.map((p, i) => (
             <article className="project" key={p.name} style={{ '--i': i }}>
               <div className="project__card">
                 <div className="project__media">
-                  <img src={p.image} alt={`Aperçu du projet ${p.name}`} loading="lazy" />
+                  <Diagram type={p.diagram} />
                 </div>
                 <div className="project__body">
                   <div className="project__top">
                     <span>
-                      {pad(i + 1)} / {pad(projects.length)}
+                      {pad(i + 1)} / {pad(cases.length)} · {p.client}
                     </span>
                     <span className="tag">{p.tag}</span>
                   </div>
                   <h3>{p.name}</h3>
                   <p className="project__desc">{p.description}</p>
+                  <ul className="project__points">
+                    {p.points.map((pt) => (
+                      <li key={pt}>{pt}</li>
+                    ))}
+                  </ul>
                   <ul className="chips" aria-label="Technologies">
                     {p.stack.map((s) => (
                       <li key={s}>{s}</li>
                     ))}
                   </ul>
-                  <p className="project__context">{p.context}</p>
                 </div>
               </div>
             </article>
           ))}
+        </div>
 
-          <article className="project project--cta" style={{ '--i': projects.length }}>
-            <div className="project__card">
-              <div className="project__body">
-                <p className="kicker">Prochain projet</p>
-                <h3>
-                  Et bien d’autres…
-                  <br />
-                  <em>peut-être le vôtre ? 👀</em>
-                </h3>
-                <a href="#contact" className="btn" onClick={handleAnchor}>
-                  Démarrer un projet <span aria-hidden="true">→</span>
-                </a>
-              </div>
-            </div>
-          </article>
+        <div className="archive">
+          <p className="kicker" data-reveal>
+            Avant Baudouin · projets de formation
+          </p>
+          <ul>
+            {archive.map((p) => (
+              <li className="archive__row" key={p.name} data-reveal>
+                <h3>{p.name}</h3>
+                <p>{p.description}</p>
+                <span className="archive__stack">{p.stack}</span>
+                <span className="archive__context">{p.context}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

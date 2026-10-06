@@ -62,7 +62,7 @@ const Process = () => {
     <section className="process" id="process" ref={root}>
       <div className="process__sticky">
         <div className="container">
-          <SectionHeading index="03" kicker="Méthode">
+          <SectionHeading index="05" kicker="Méthode">
             Comment je construis
             <br />
             <em>un système qui dure.</em>

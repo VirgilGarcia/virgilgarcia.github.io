@@ -1,50 +1,57 @@
 export const profile = {
   name: 'Virgil Garcia',
-  role: ['Software', 'Architect'],
-  city: 'Marseille',
+  role: ['Technical', 'Architect'],
+  title: 'Expert Infor M3 CloudSuite',
+  city: 'Auriol',
   timezone: 'Europe/Paris',
   email: '13viga@gmail.com',
   pitch:
-    "Je conçois des SaaS et des architectures logicielles robustes, de l'ERP aux systèmes connectés, de l'idée jusqu'à la mise en production.",
+    "Architecte technique spécialisé Infor M3 CloudSuite et intégration des systèmes d'information. Je conçois des solutions fiables, maintenables et adaptées aux besoins métiers.",
+  malt: 'https://www.malt.fr/profile/virgilgarcia',
   socials: [
+    { label: 'Malt', href: 'https://www.malt.fr/profile/virgilgarcia' },
     { label: 'LinkedIn', href: 'https://linkedin.com/in/virgil-garcia-b58796222' },
     { label: 'GitHub', href: 'https://github.com/VirgilGarcia' },
   ],
 };
 
+// Sert au calcul des années d'expérience affichées
+export const careerStart = new Date(2023, 8, 1);
+
 export const bio = [
-  "Passionné par l'IT depuis mon plus jeune âge, tout a commencé à 12 ans avec Minecraft : c'est là que j'ai découvert la programmation, puis créé mon premier site web.",
-  "Autodidacte à mes débuts, j'ai exploré HTML, CSS, JavaScript et PHP à travers des projets personnels avant de me former avec Le Wagon en 2023, puis d'être diplômé d'Epitech en architecture logicielle, avec une spécialisation IoT.",
-  "Depuis septembre 2023, je travaille chez Baudouin. J'y conçois des SaaS et je fais évoluer l'ERP Infor CloudSuite M3 : des architectures efficaces, pensées pour les besoins métiers et pour durer.",
+  "Architecte technique spécialisé dans l'écosystème Infor M3 CloudSuite et l'intégration des systèmes d'information.",
+  "Chez Baudouin depuis septembre 2023, je conçois les échanges entre l'ERP, les applications métiers et les systèmes tiers : flux de données, API, outils de migration, mais aussi des SaaS et portails métiers, de la conception à la mise en production.",
+  "En parallèle, j'ai fondé Wiclo, un réseau social dédié à la mode sur iOS et Android, dont je pilote l'architecture et le développement.",
+  "Tout a commencé à 12 ans avec Minecraft. L'objectif, lui, n'a pas changé : construire des solutions fiables, maintenables et utiles.",
 ];
 
 export const experience = [
   {
-    title: 'Baudouin',
-    place: 'Depuis septembre 2023',
-    detail: 'Conception de SaaS et développement autour de l’ERP Infor CloudSuite M3.',
-    period: 'En poste',
+    title: 'IT Technical Architect',
+    place: 'Moteurs Baudouin · Cassis',
+    detail: 'Intégration Infor M3 CloudSuite, flux inter-applicatifs, migration de données, SaaS et portails métiers.',
+    period: 'Depuis 2023',
+  },
+  {
+    title: 'Fondateur & Lead Developer',
+    place: 'Wiclo · Auriol',
+    detail: 'Réseau social mode sur iOS et Android : architecture, backend, application mobile et mise en production.',
+    period: 'Depuis 2026',
   },
 ];
 
 export const education = [
   {
-    title: "MSc Pro Architecte Logiciel",
-    school: 'Epitech, Marseille',
-    detail: "Diplômé en conception d'applications, programmation & réseaux, spécialisation IoT.",
-    level: 'Bac +5',
+    title: 'MSc Architecte Logiciel',
+    place: 'Epitech · 2025',
+    detail: "Conception d'applications, programmation et réseaux, spécialisation IoT.",
+    period: 'Bac +5',
   },
   {
     title: "Concepteur Développeur d'Applications",
-    school: 'Le Wagon, Marseille',
-    detail: 'Formation intensive full-stack en développement web.',
-    level: 'Bac +3',
-  },
-  {
-    title: 'Baccalauréat STMG',
-    school: 'Lycée Joliot-Curie, Aubagne',
-    detail: 'Spécialité Systèmes d’Information de Gestion.',
-    level: 'Bac',
+    place: 'Le Wagon · 2023',
+    detail: 'Formation intensive full stack en développement web.',
+    period: 'Bac +3',
   },
 ];
 
@@ -52,10 +59,20 @@ const icon = (file) => `/assets/${file}`;
 
 export const skillGroups = [
   {
-    label: 'ERP & IA',
+    label: 'ERP Infor',
     skills: [
       { name: 'Infor CloudSuite M3' },
+      { name: 'Infor ION / ION API' },
+      { name: 'Mapping MEC' },
+      { name: 'Data Lake / Compass' },
+      { name: 'Infor OS / Mongoose' },
+    ],
+  },
+  {
+    label: 'Architecture & IA',
+    skills: [
       { name: 'Conception SaaS' },
+      { name: 'MQTT / IoT' },
       { name: 'IA générative' },
     ],
   },
@@ -66,6 +83,7 @@ export const skillGroups = [
       { name: 'CSS', icon: icon('css.svg') },
       { name: 'SCSS', icon: icon('sass.svg') },
       { name: 'JavaScript', icon: icon('javascript.svg') },
+      { name: 'TypeScript' },
       { name: 'React', icon: icon('react.svg') },
       { name: 'React Native', icon: icon('react.svg') },
       { name: 'Kotlin', icon: icon('kotlin.svg') },
@@ -73,21 +91,15 @@ export const skillGroups = [
     ],
   },
   {
-    label: 'Back-end',
+    label: 'Back-end & systèmes',
     skills: [
       { name: 'Node.js', icon: icon('nodejs.png') },
-      { name: 'Ruby', icon: icon('ruby.svg') },
-      { name: 'Rails', icon: icon('rails.svg') },
-      { name: 'PHP', icon: icon('php.svg') },
       { name: 'Java', icon: icon('java.svg') },
-    ],
-  },
-  {
-    label: 'Systèmes',
-    skills: [
-      { name: 'C++', icon: icon('c++.png') },
-      { name: 'C#', icon: icon('csharp.png') },
+      { name: 'PHP', icon: icon('php.svg') },
+      { name: 'Ruby / Rails', icon: icon('rails.svg') },
       { name: 'Python', icon: icon('python.png') },
+      { name: 'C#', icon: icon('csharp.png') },
+      { name: 'C++', icon: icon('c++.png') },
     ],
   },
   {
@@ -102,6 +114,7 @@ export const skillGroups = [
     label: 'DevOps & outils',
     skills: [
       { name: 'Docker', icon: icon('docker.svg') },
+      { name: 'Podman' },
       { name: 'Git / GitHub', icon: icon('git.svg') },
       { name: 'GitLab', icon: icon('gitlab.svg') },
       { name: 'Nginx / Apache', icon: icon('server.png') },
@@ -133,54 +146,113 @@ export const process = [
   },
 ];
 
-export const projects = [
+export const services = [
+  {
+    title: 'Intégration Infor M3 CloudSuite',
+    text: "Faire dialoguer M3 avec vos applications métiers et vos systèmes tiers, de façon fiable et traçable.",
+    tags: ['Infor ION', 'MEC', 'API REST', 'Events', 'Agreements'],
+  },
+  {
+    title: 'Architecture SI & intégration',
+    text: "Choix d'architecture, flux inter-applicatifs, microservices et modernisation de solutions existantes.",
+    tags: ['Architecture IT', 'Microservices', 'Data Flows'],
+  },
+  {
+    title: 'Migration & traitement de données',
+    text: 'Outils de migration et de traitement à grande échelle, automatisation des traitements autour de M3.',
+    tags: ['Migration', 'SQL', 'Automatisation'],
+  },
+  {
+    title: 'SaaS & applications full stack',
+    text: 'Portails métiers, SaaS et applications mobiles, de la conception à la mise en production.',
+    tags: ['Java', 'Node.js', 'React', 'Mobile'],
+  },
+];
+
+// Les visuels sont des schémas d'architecture dessinés en SVG (voir components/Diagram.jsx)
+export const cases = [
+  {
+    name: 'Intégration Infor M3',
+    client: 'Moteurs Baudouin',
+    tag: 'Intégration SI',
+    diagram: 'integration',
+    description:
+      "Architecture des échanges entre l'ERP Infor M3 CloudSuite, les applications métiers et les systèmes tiers.",
+    points: [
+      "Conception des architectures d'intégration et des flux inter-applicatifs",
+      'Mise en œuvre avec Infor ION, MEC, API REST et intégrations point à point',
+      'Échanges pilotés par Events, Agreements et Data Flows',
+    ],
+    stack: ['Infor M3', 'ION', 'MEC', 'API REST', 'Events'],
+  },
+  {
+    name: 'Wiclo',
+    client: 'Fondateur & Lead Developer',
+    tag: 'Produit',
+    diagram: 'wiclo',
+    description: 'Réseau social dédié à la mode et au partage de tenues, disponible sur iOS et Android.',
+    points: [
+      "Architecture technique, backend et application mobile, jusqu'à la mise en production",
+      'Partage de tenues, recherche par pièce et messages privés',
+      'WiCall, des sondages en temps réel, et WiPRO, l’espace des marques et créateurs',
+    ],
+    stack: ['iOS', 'Android', 'Back-end', 'SaaS'],
+  },
+  {
+    name: 'Migration de données',
+    client: 'Moteurs Baudouin',
+    tag: 'Data',
+    diagram: 'migration',
+    description: 'Outils de migration et de traitement de données à grande échelle autour de M3.',
+    points: [
+      'Conception d’outils de migration et de traitement à grande échelle',
+      'Automatisation des traitements et de la gestion des données M3',
+    ],
+    stack: ['Infor M3', 'SQL', 'Java', 'Node.js'],
+  },
+  {
+    name: 'SaaS & portails métiers',
+    client: 'Moteurs Baudouin',
+    tag: 'Full stack',
+    diagram: 'portal',
+    description: 'Applications web et portails métiers connectés au système d’information.',
+    points: [
+      'Conception et développement full stack, de la conception à la mise en production',
+      'Participation aux choix d’architecture et à la modernisation de l’existant',
+    ],
+    stack: ['React', 'Node.js', 'Java', 'SQL'],
+  },
+];
+
+export const archive = [
   {
     name: 'The Convoyor',
-    image: '/assets/convoyor.webp',
-    description:
-      "Architecture d'un nouveau système de convoyage de colis industriel, piloté par application mobile.",
-    stack: ['Flutter', 'C++', 'M5Stack', 'MQTT', 'ERP', 'Docker'],
-    context: 'Projet Epitech, en groupe',
-    tag: 'IoT',
+    description: 'Architecture IoT d’un système de convoyage de colis piloté par application.',
+    stack: 'Flutter, C++, M5Stack, MQTT, Docker',
+    context: 'Epitech',
   },
   {
     name: 'Le Monaco VR',
-    image: '/assets/casino.webp',
-    description: 'Casino de jeux de hasard multijoueur en réalité virtuelle.',
-    stack: ['Unity', 'C#', 'Blockchain', 'Docker'],
-    context: 'Projet Epitech, en groupe',
-    tag: 'VR',
+    description: 'Casino multijoueur en réalité virtuelle.',
+    stack: 'Unity, C#, Blockchain',
+    context: 'Epitech',
   },
   {
     name: 'Time Manager',
-    image: '/assets/timemanager.webp',
-    description: "SaaS de gestion du temps de travail avec suivi RH.",
-    stack: ['React', 'SCSS', 'Elixir', 'PostgreSQL'],
-    context: 'Projet Epitech, en groupe',
-    tag: 'SaaS',
+    description: 'SaaS de gestion du temps de travail avec suivi RH.',
+    stack: 'React, Elixir, PostgreSQL',
+    context: 'Epitech',
   },
   {
     name: 'Mojo',
-    image: '/assets/mojo.webp',
-    description: 'Application mobile pour scanner, lister et payer ses courses directement depuis son téléphone.',
-    stack: ['Kotlin', 'Jetpack Compose', 'Spring Boot', 'PostgreSQL'],
-    context: 'Projet Epitech, en groupe',
-    tag: 'Mobile',
+    description: 'Application mobile pour scanner et payer ses courses.',
+    stack: 'Kotlin, Spring Boot, PostgreSQL',
+    context: 'Epitech',
   },
   {
     name: 'Dev-a-licious',
-    image: '/assets/dev-a-licious.webp',
-    description: 'Marketplace pour proposer ses services de développeur ou recruter des programmeurs.',
-    stack: ['Ruby on Rails', 'PostgreSQL', 'SCSS', 'JavaScript'],
-    context: 'Projet Le Wagon, en groupe',
-    tag: 'Web',
-  },
-  {
-    name: 'La Musclerie',
-    image: '/assets/lamusclerie.webp',
-    description: 'Site proposant des articles et des programmes sportifs.',
-    stack: ['PHP', 'MySQL', 'SCSS', 'JavaScript'],
-    context: 'Projet perso, avec un ami',
-    tag: 'Web',
+    description: 'Marketplace de mise en relation avec des développeurs.',
+    stack: 'Ruby on Rails, PostgreSQL',
+    context: 'Le Wagon',
   },
 ];

@@ -44,7 +44,7 @@ const Hero = () => {
       </Suspense>
       <div className="hero__inner container">
         <p className="hero__eyebrow hero__fade">
-          <span className="pulse" aria-hidden="true" /> {profile.name} · Portfolio
+          <span className="pulse" aria-hidden="true" /> {profile.name} · {profile.title}
         </p>
 
         <h1 className="hero__title">

@@ -1,12 +1,13 @@
-import { bio, education, experience, profile, skillGroups } from '../data/content';
+import { bio, careerStart, education, experience, profile, skillGroups } from '../data/content';
 import SectionHeading from '../components/SectionHeading';
 
 const techCount = skillGroups.reduce((n, g) => n + g.skills.length, 0);
+const years = Math.floor((Date.now() - careerStart) / (365.25 * 24 * 3600 * 1000));
 
 const stats = [
-  { value: '12', unit: ' ans', label: 'Mes premières lignes de code' },
-  { value: String(techCount), unit: '+', label: 'Technologies pratiquées' },
-  { value: 'Bac', unit: '+5', label: 'Diplômé architecte logiciel, Epitech' },
+  { value: String(years), unit: ' ans', label: 'Architecte technique chez Moteurs Baudouin' },
+  { value: 'M3', unit: '', label: 'Infor CloudSuite : ION, MEC, API, Data Flows' },
+  { value: String(techCount), unit: '+', label: 'Technologies maîtrisées' },
 ];
 
 const Timeline = ({ label, items }) => (
@@ -36,7 +37,7 @@ const About = () => (
       <SectionHeading index="01" kicker="À propos">
         Du premier bloc Minecraft
         <br />
-        <em>à l’architecture logicielle.</em>
+        <em>à l’architecture SI.</em>
       </SectionHeading>
 
       <div className="about__grid">
@@ -67,7 +68,7 @@ const About = () => (
       </div>
 
       <Timeline label="Expérience" items={experience.map((e) => ({ ...e, sub: e.place, badge: e.period }))} />
-      <Timeline label="Formation" items={education.map((e) => ({ ...e, sub: e.school, badge: e.level }))} />
+      <Timeline label="Formation" items={education.map((e) => ({ ...e, sub: e.place, badge: e.period }))} />
     </div>
   </section>
 );

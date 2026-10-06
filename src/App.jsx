@@ -7,6 +7,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Hero from './sections/Hero';
 import About from './sections/About';
+import Expertise from './sections/Expertise';
 import Skills from './sections/Skills';
 import Process from './sections/Process';
 import Projects from './sections/Projects';
@@ -49,9 +50,10 @@ const App = () => {
       <main>
         <Hero />
         <About />
+        <Expertise />
+        <Projects />
         <Skills />
         <Process />
-        <Projects />
         <Contact />
       </main>
       <Footer />

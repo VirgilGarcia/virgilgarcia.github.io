@@ -4,9 +4,9 @@ import { handleAnchor } from '../hooks/useSmoothScroll';
 
 const links = [
   { href: '#about', label: 'À propos' },
+  { href: '#expertise', label: 'Expertise' },
+  { href: '#projects', label: 'Réalisations' },
   { href: '#stack', label: 'Stack' },
-  { href: '#process', label: 'Méthode' },
-  { href: '#projects', label: 'Projets' },
 ];
 
 const formatTime = () =>
