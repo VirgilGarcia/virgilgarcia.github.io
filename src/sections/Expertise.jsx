@@ -30,7 +30,7 @@ const Expertise = () => (
       <div className="expertise__cta" data-reveal>
         <p>
           <span className="pulse" aria-hidden="true" /> Ouvert aux missions freelance, notamment sur site
-          jusqu’à 50 km autour d’{profile.city}.
+          jusqu’à 50 km autour de {profile.city}.
         </p>
         <div className="expertise__actions">
           <Magnetic>

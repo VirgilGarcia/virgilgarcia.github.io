@@ -2,7 +2,7 @@ export const profile = {
   name: 'Virgil Garcia',
   role: ['Technical', 'Architect'],
   title: 'Expert Infor M3 CloudSuite',
-  city: 'Auriol',
+  city: 'Marseille',
   timezone: 'Europe/Paris',
   email: '13viga@gmail.com',
   pitch:
@@ -34,7 +34,7 @@ export const experience = [
   },
   {
     title: 'Fondateur & Lead Developer',
-    place: 'Wiclo · Auriol',
+    place: 'Wiclo · Marseille',
     detail: 'Réseau social mode sur iOS et Android : architecture, backend, application mobile et mise en production.',
     period: 'Depuis 2026',
   },
