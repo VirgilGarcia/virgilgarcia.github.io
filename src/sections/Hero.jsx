@@ -2,7 +2,7 @@ import { lazy, Suspense, useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import { gsap } from '../lib/gsap';
 import { profile } from '../data/content';
-import { handleAnchor } from '../hooks/useSmoothScroll';
+import { CvButton } from '../components/CvButton';
 
 // three.js est chargé à part pour ne pas retarder l'affichage du texte
 const Sphere = lazy(() => import('../components/Sphere'));
@@ -44,7 +44,7 @@ const Hero = () => {
       </Suspense>
       <div className="hero__inner container">
         <p className="hero__eyebrow hero__fade">
-          <span className="pulse" aria-hidden="true" /> {profile.name} · {profile.title}
+          {profile.name}
         </p>
 
         <h1 className="hero__title">
@@ -54,11 +54,15 @@ const Hero = () => {
         </h1>
 
         <div className="hero__bottom">
-          <p className="hero__pitch hero__fade">{profile.pitch}</p>
-          <a href="#about" className="hero__scroll hero__fade" onClick={handleAnchor}>
-            <span>Défiler</span>
-            <span className="hero__scroll-line" aria-hidden="true" />
-          </a>
+          <div className="hero__intro hero__fade">
+            <p className="hero__status">
+              <span className="pulse" aria-hidden="true" /> {profile.availability}
+            </p>
+            <p className="hero__pitch">{profile.pitch}</p>
+          </div>
+          <div className="hero__cta hero__fade">
+            <CvButton />
+          </div>
         </div>
       </div>
     </section>

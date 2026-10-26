@@ -1,12 +1,14 @@
 export const profile = {
   name: 'Virgil Garcia',
   role: ['Technical', 'Architect'],
-  title: 'Expert Infor M3 CloudSuite',
   city: 'Marseille',
   timezone: 'Europe/Paris',
   email: '13viga@gmail.com',
   pitch:
     "Architecte technique spécialisé Infor M3 CloudSuite et intégration des systèmes d'information. Je conçois des solutions fiables, maintenables et adaptées aux besoins métiers.",
+  availability: 'Ouvert à toutes sortes d’opportunités',
+  // Chemin d'un PDF dans public/ (ex. '/cv.pdf') : le bouton CV le téléchargera directement
+  cv: null,
   malt: 'https://www.malt.fr/profile/virgilgarcia',
   socials: [
     { label: 'Malt', href: 'https://www.malt.fr/profile/virgilgarcia' },
@@ -120,29 +122,6 @@ export const skillGroups = [
       { name: 'Nginx / Apache', icon: icon('server.png') },
       { name: 'Bash', icon: icon('bash.svg') },
     ],
-  },
-];
-
-export const process = [
-  {
-    title: 'Planification & Analyse',
-    text: 'Comprendre le métier, cadrer les besoins et les contraintes avant d’écrire la moindre ligne.',
-  },
-  {
-    title: 'Conception & Architecture',
-    text: 'Choisir les bons outils, découper le système et poser des fondations qui tiennent la charge.',
-  },
-  {
-    title: 'Développement & Intégration',
-    text: 'Un code lisible, testé et versionné, intégré en continu avec le reste du système.',
-  },
-  {
-    title: 'Tests, Sécurité & Validation',
-    text: 'Vérifier, durcir, mesurer. Rien ne part en production sans avoir été éprouvé.',
-  },
-  {
-    title: 'Déploiement & Scalabilité',
-    text: 'Conteneuriser, automatiser et préparer le système à grandir sereinement.',
   },
 ];
 

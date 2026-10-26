@@ -107,6 +107,8 @@ const Diagram = ({ type }) => {
 
       {d.nodes.map((n) => (
         <g key={n.id} className={`diagram__node${n.accent ? ' is-accent' : ''}`}>
+          {/* Fond opaque : les liaisons, tracées depuis le centre, ne doivent pas transparaître */}
+          <rect x={n.x - NODE_W / 2} y={n.y - NODE_H / 2} width={NODE_W} height={NODE_H} rx="12" className="diagram__node-bg" />
           <rect x={n.x - NODE_W / 2} y={n.y - NODE_H / 2} width={NODE_W} height={NODE_H} rx="12" />
           <text x={n.x} y={n.y - 3} textAnchor="middle" className="diagram__label">
             {n.label}

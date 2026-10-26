@@ -107,7 +107,7 @@ const Sphere = () => {
       renderer.setSize(w, h);
       camera.aspect = w / h;
       // Sur mobile (portrait) on recule la caméra pour garder la sphère entière
-      camera.position.z = w / h < 1 ? 16 : 11;
+      camera.position.z = w / h < 1 ? 16 : 12.5;
       uniforms.uCamDist.value = camera.position.z;
       camera.updateProjectionMatrix();
     };

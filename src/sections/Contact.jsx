@@ -2,8 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import { profile } from '../data/content';
 import Magnetic from '../components/Magnetic';
 
-const ringText = 'Travaillons ensemble • Let’s build • ';
-
 const Contact = () => {
   const [copied, setCopied] = useState(false);
   const timer = useRef();
@@ -24,22 +22,8 @@ const Contact = () => {
   return (
     <section className="section contact" id="contact">
       <div className="container">
-        <div className="contact__ring" aria-hidden="true">
-          <svg viewBox="0 0 200 200">
-            <defs>
-              <path id="ring-path" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" />
-            </defs>
-            <text>
-              <textPath href="#ring-path" textLength="488" lengthAdjust="spacing">
-                {ringText.repeat(2)}
-              </textPath>
-            </text>
-          </svg>
-          <span className="contact__arrow">↘</span>
-        </div>
-
         <p className="kicker" data-reveal>
-          <span>06</span> Contact
+          <span>05</span> Contact
         </p>
         <h2 className="contact__title" data-reveal>
           Un projet en tête ?

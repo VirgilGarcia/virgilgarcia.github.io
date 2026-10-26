@@ -1,7 +1,5 @@
-import { profile, services } from '../data/content';
-import { handleAnchor } from '../hooks/useSmoothScroll';
+import { services } from '../data/content';
 import SectionHeading from '../components/SectionHeading';
-import Magnetic from '../components/Magnetic';
 
 const Expertise = () => (
   <section className="section expertise" id="expertise">
@@ -25,23 +23,6 @@ const Expertise = () => (
             </ul>
           </article>
         ))}
-      </div>
-
-      <div className="expertise__cta" data-reveal>
-        <p>
-          <span className="pulse" aria-hidden="true" /> Ouvert aux missions freelance, notamment sur site
-          jusqu’à 50 km autour de {profile.city}.
-        </p>
-        <div className="expertise__actions">
-          <Magnetic>
-            <a href={profile.malt} className="btn" target="_blank" rel="noopener noreferrer">
-              Me proposer une mission sur Malt <span aria-hidden="true">↗</span>
-            </a>
-          </Magnetic>
-          <a href="#contact" className="expertise__link" onClick={handleAnchor}>
-            Ou m’écrire directement
-          </a>
-        </div>
       </div>
     </div>
   </section>

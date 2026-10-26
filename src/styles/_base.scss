@@ -126,7 +126,7 @@ em {
 }
 
 .section {
-  padding-block: clamp(6rem, 14vw, 12rem);
+  padding-block: clamp(4.5rem, 9vw, 8rem);
 }
 
 // ---------- Typo partagée ----------
@@ -274,6 +274,17 @@ em {
   cursor: none !important;
 }
 
+// La fenêtre CV s'affiche au-dessus de tout, curseur personnalisé compris :
+// on y rend le curseur natif
+.has-cursor .cv-modal,
+.has-cursor .cv-modal * {
+  cursor: auto !important;
+}
+
+.has-cursor .cv-modal :is(a, button) {
+  cursor: pointer !important;
+}
+
 .cursor {
   position: fixed;
   top: 0;
@@ -337,5 +348,113 @@ em {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+// Bouton secondaire (contour)
+.btn--ghost {
+  background: transparent;
+  color: var(--text);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.25);
+
+  &:hover {
+    color: var(--bg);
+  }
+}
+
+// ---------- Fenêtre CV ----------
+
+.cv-modal {
+  margin: auto;
+  width: min(34rem, calc(100% - 2rem));
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) * 1.25);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 40px 120px rgb(0 0 0 / 0.6);
+
+  &::backdrop {
+    background: rgb(5 5 6 / 0.7);
+    backdrop-filter: blur(6px);
+  }
+
+  &[open] {
+    animation: cv-in 0.5s var(--ease-out);
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: clamp(1.75rem, 5vw, 2.75rem);
+
+    h2 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2.25rem, 6vw, 3.25rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+    }
+
+    > p:not(.kicker) {
+      color: var(--muted);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--muted);
+    transition:
+      background 0.3s,
+      color 0.3s;
+
+    &:hover {
+      background: var(--surface-2);
+      color: var(--text);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  // Réutilise le style de l'adresse e-mail du contact, en plus compact
+  .contact__email {
+    font-size: 1rem;
+  }
+
+  &__link {
+    align-self: flex-start;
+    font-size: 0.9rem;
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    transition:
+      color 0.3s,
+      border-color 0.3s;
+
+    &:hover {
+      color: var(--text);
+      border-color: var(--accent);
+    }
+  }
+}
+
+@keyframes cv-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
   }
 }

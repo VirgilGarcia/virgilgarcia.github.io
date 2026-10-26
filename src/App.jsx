@@ -3,13 +3,13 @@ import { useGSAP } from '@gsap/react';
 import { gsap, ScrollTrigger } from './lib/gsap';
 import useSmoothScroll from './hooks/useSmoothScroll';
 import Cursor from './components/Cursor';
+import { CvModal } from './components/CvButton';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Hero from './sections/Hero';
 import About from './sections/About';
 import Expertise from './sections/Expertise';
 import Skills from './sections/Skills';
-import Process from './sections/Process';
 import Projects from './sections/Projects';
 import Contact from './sections/Contact';
 
@@ -26,10 +26,7 @@ const App = () => {
   useGSAP(
     () => {
       gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
-        // Les éléments dans un bloc sticky sont gérés par leur section (positions faussées sinon)
-        const targets = gsap.utils
-          .toArray('[data-reveal]')
-          .filter((el) => !el.closest('.process__sticky'));
+        const targets = gsap.utils.toArray('[data-reveal]');
         gsap.set(targets, { autoAlpha: 0, y: 40 });
         ScrollTrigger.batch(targets, {
           start: 'top 88%',
@@ -53,10 +50,10 @@ const App = () => {
         <Expertise />
         <Projects />
         <Skills />
-        <Process />
         <Contact />
       </main>
       <Footer />
+      <CvModal />
     </div>
   );
 };
